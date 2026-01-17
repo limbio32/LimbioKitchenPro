@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: limbio
       POSTGRES_PASSWORD: amstel3229
-      POSTGRES_DB: LimbioKitchenPro
+      POSTGRES_DB: limbio_kitchen_pro
     ports:
       - "5432:5432"
     volumes:
@@ -17,7 +17,7 @@ services:
     build: .
     container_name: limbio-backend
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/LimbioKitchenPro
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/limbio_kitchen_pro
       SPRING_DATASOURCE_USERNAME: limbio
       SPRING_DATASOURCE_PASSWORD: amstel3229
     depends_on:

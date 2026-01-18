@@ -1,14 +1,18 @@
-version: '3.8'
+version: "3.9"
 
 services:
-  app:
-    image: backend-app
-    container_name: limbio-backend
+  backend:
     build: .
+    container_name: limbio_kitchen_pro-backend
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://host.docker.internal:5432/limbio_kitchen_pro
-      SPRING_DATASOURCE_USERNAME: limbio
-      SPRING_DATASOURCE_PASSWORD: amstel3229
+      # Подключение к Neon
+      SPRING_DATASOURCE_URL: jdbc:postgresql://ep-rapid-meadow-ah64j4q3-pooler.c-3.us-east-1.aws.neon.tech:5432/neondb?sslmode=require&channelBinding=require
+      SPRING_DATASOURCE_USERNAME: neondb_owner
+      SPRING_DATASOURCE_PASSWORD: npg_Oob21RXhWGeH
+      # Настройки Spring Boot
+      SPRING_JPA_HIBERNATE_DDL_AUTO: none
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"
     ports:
       - "8080:8080"
-
+    restart: unless-stopped

@@ -1,0 +1,35 @@
+https://github.com/limbio32/LimbioKitchenPro.git
+
+https://limbiokitchenpro.onrender.com/
+
+./mvnw clean package -DskipTests	Пересобрать проект
+docker build -t limbio-backend .		Пересобрать Docker образ
+docker run -p 8080:8080 --name limbio_kitchen_pro-backend limbio-backend	Запускает контейнер и пробрасывает порт 8080 на хост.
+
+docker rm -f limbio-backend			Удалить старый контейнер xxxxxxxxxxxxxxxx
+
+docker stop $(docker ps -q)			Остановить все контейнеры
+docker rm -f $(docker ps -aq)		Удалить все контейнеры
+
+
+
+----------Запустить новый контейнер
+
+docker run --rm -p 8080:8080 `
+  -e SPRING_DATASOURCE_URL=jdbc:postgresql://db.tftpgtvkwzvmfvhwajqs.supabase.co:5432/postgres `
+  -e SPRING_DATASOURCE_USERNAME=postgres `
+  -e SPRING_DATASOURCE_PASSWORD=amstel3229amstel `
+  --name limbio-backend limbio-backend
+  
+  
+----------Обновить Github
+
+git init
+git add .
+git commit -m "Initial commit: full project ready for deploy"
+
+git branch -M main
+git push -u origin main
+
+
+docker compose up --build

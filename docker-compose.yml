@@ -6,7 +6,7 @@ services:
     container_name: limbio_kitchen_pro-backend
     environment:
       # Подключение к Neon
-      SPRING_DATASOURCE_URL: jdbc:postgresql://ep-rapid-meadow-ah64j4q3-pooler.c-3.us-east-1.aws.neon.tech:5432/neondb?sslmode=require&channelBinding=require
+      SPRING_DATASOURCE_URL: jdbc:postgresql://ep-rapid-meadow-ah64j4q3.c-3.us-east-1.aws.neon.tech:5432/neondb?sslmode=require
       SPRING_DATASOURCE_USERNAME: neondb_owner
       SPRING_DATASOURCE_PASSWORD: npg_Oob21RXhWGeH
       # Настройки Spring Boot

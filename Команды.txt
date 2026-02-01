@@ -3,10 +3,11 @@ https://github.com/limbio32/LimbioKitchenPro.git
 https://limbiokitchenpro.onrender.com/
 
 ./mvnw clean package -DskipTests	Пересобрать проект
-docker build -t limbio-backend .		Пересобрать Docker образ
+docker build -t limbio-backend .	Пересобрать Docker образ
+docker rm -f limbio_kitchen_pro-backend		Удалить старый контейнер xxxxxxxxxxxxxxxx
 docker run -p 8080:8080 --name limbio_kitchen_pro-backend limbio-backend	Запускает контейнер и пробрасывает порт 8080 на хост.
 
-docker rm -f limbio-backend			Удалить старый контейнер xxxxxxxxxxxxxxxx
+
 
 docker stop $(docker ps -q)			Остановить все контейнеры
 docker rm -f $(docker ps -aq)		Удалить все контейнеры

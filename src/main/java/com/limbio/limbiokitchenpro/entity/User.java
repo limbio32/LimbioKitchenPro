@@ -1,31 +1,47 @@
 package com.limbio.limbiokitchenpro.entity;
 
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "users")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    private Long id;
+    @Column(columnDefinition = "uuid")
+    private UUID id;
 
-    @Column(name = "firstname", nullable = false, unique = true)
+    @Column(unique = true, nullable = false)
+    private String email;
+
+    @Column(name = "password_hash", nullable = false)
+    private String passwordHash;
+
+    @Column(name = "role_id", nullable = false)
+    private String roleId;
+
     private String firstname;
-
-    @Column(name = "lastname", nullable = false)
     private String lastname;
+    private String phone;
 
-    public User() {}
+    @Column(name = "created_time")
+    private LocalDateTime createdTime;
 
-    public User(String firstname, String lastname) {
-        this.firstname = firstname;
-        this.lastname = lastname;
+    public User() {
+        this.id = UUID.randomUUID();
+        this.createdTime = LocalDateTime.now();
     }
 
     // геттеры и сеттеры
-    public Long getId() { return id; }
+    public UUID getId() { return id; }
+    public void setId(UUID id) { this.id = id; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+
+    public String getPasswordHash() { return passwordHash; }
+    public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
 
     public String getFirstname() { return firstname; }
     public void setFirstname(String firstname) { this.firstname = firstname; }
@@ -33,4 +49,9 @@ public class User {
     public String getLastname() { return lastname; }
     public void setLastname(String lastname) { this.lastname = lastname; }
 
+    public String getRole() { return roleId; }
+    public void setRole(String role) { this.roleId = role; }
+
+    public LocalDateTime getCreatedTime() { return createdTime; }
+    public void setCreatedTime(LocalDateTime createdTime) { this.createdTime = createdTime; }
 }

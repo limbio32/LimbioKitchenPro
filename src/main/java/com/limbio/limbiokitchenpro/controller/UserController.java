@@ -1,7 +1,10 @@
 package com.limbio.limbiokitchenpro.controller;
 
+import com.limbio.limbiokitchenpro.dto.RegisterRequest;
+import com.limbio.limbiokitchenpro.dto.LoginRequest;
 import com.limbio.limbiokitchenpro.entity.User;
 import com.limbio.limbiokitchenpro.service.UserService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,15 +19,25 @@ public class UserController {
         this.userService = userService;
     }
 
-    // GET /api/users
-    @GetMapping
-    public List<User> getAllUsers() {
-        return userService.getAllUsers();
+    @PostMapping("/register")
+    public ResponseEntity<String> register(@RequestBody RegisterRequest request) {
+        userService.register(
+                request.getEmail(),
+                request.getPassword(),
+                request.getFirstname(),
+                request.getLastname()
+        );
+        return ResponseEntity.ok("User registered successfully");
     }
 
-    // POST /api/users
-    @PostMapping
-    public User createUser(@RequestBody User user) {
-        return userService.createUser(user);
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody LoginRequest request) {
+        User user = userService.login(request.getEmail(), request.getPassword());
+        return ResponseEntity.ok("Logged in as: " + user.getEmail());
+    }
+
+    @GetMapping
+    public ResponseEntity<List<User>> getAllUsers() {
+        return ResponseEntity.ok(userService.getAllUsers());
     }
 }

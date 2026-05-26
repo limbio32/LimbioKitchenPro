@@ -1,12 +1,8 @@
 package com.limbio.limbiokitchenpro.controller;
 
 import com.limbio.limbiokitchenpro.dto.DishListItemDto;
-import com.limbio.limbiokitchenpro.dto.RegisterRequest;
-import com.limbio.limbiokitchenpro.dto.LoginRequest;
-import com.limbio.limbiokitchenpro.entity.Dish;
 import com.limbio.limbiokitchenpro.repository.DishRepository;
 import com.limbio.limbiokitchenpro.service.DishService;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

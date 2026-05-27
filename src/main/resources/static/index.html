@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <menu class="header__menu menu">
-                    
+                    <div id="dishes"></div>
                 </menu>
             </header>
             <main class="main">
@@ -41,5 +41,30 @@
 
             </footer>
         </div>
+        <script>
+            async function loadDishes() {
+                // запрос к REST API
+                const response = await fetch('https://limbiokitchenpro.onrender.com/api/dishes');
+                
+                // превращаем ответ в JS объект
+                const dishes = await response.json();
+
+                // контейнер
+                const container = document.getElementById('dishes');
+
+                // выводим данные
+                dishes.forEach(dishes => {
+                    container.innerHTML += `
+                        <div>
+                            <h2>${dishes.name}</h2>
+                            <p>${dishes.price}$</p>
+                        </div>
+                    `;
+                });
+            }
+
+            loadDishes();
+
+        </script>
     </body>
 </html>

@@ -7,14 +7,14 @@
     </head>
     <body>
         <div class="wrapper">
-            <header class="header">
+            <header class="header header-mainpage">
                 <div class="header__top header-top">
                     <div class="header-top__brand">
                         <a href="" class="header-top__logo">
                             <img src="/img/header/logo-64.png" alt="">
                         </a>
                         <a href="#" class="header-top__brandname">
-                            LimbioKitchenPro
+                            <p>LimbioKitchenPro</p> 
                         </a>
                     </div>
                     <div class="header-top__search">
@@ -35,36 +35,72 @@
                 </menu>
             </header>
             <main class="main">
-
+                <div class="cards">
+                    <div class="card">
+                        <div class="card__box1">
+                            <div class="card__box2">
+                                <div class="card__photo">
+                                    <img src="/img/card/07b6f9a5-dc1e-4a84-9e3c-0d7b6152fa49.png" alt="">
+                                </div>
+                                <div class="card__weight-price">
+                                    <p class="card__weight">120 г</p>
+                                    <p class="card__price">3.00 ₾</p>
+                                </div>
+                                <div class="card__dishname">
+                                    <p>Суп с мясом классический с грибами</p>
+                                </div>
+                                <div class="card__controls">
+                                    <a href="" class="card__minus-button">
+                                        <svg>
+                                            <use href="/img/icons/sprite.svg#minus"></use>
+                                        </svg>
+                                    </a>
+                                    <div class="card__quantity">
+                                        <input type="text" name="quantity" class="card__quantity-input" value="2">
+                                    </div>
+                                    <a href="" class="card__plus-button">
+                                        <svg>
+                                            <use href="/img/icons/sprite.svg#plus"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="card__measure-unit">
+                                        <p>шт</p> 
+                                        <svg>
+                                            <use href="/img/icons/sprite.svg#chevron_down"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="card__total">
+                                    <p class="card__total-text">Итого:</p>
+                                    <p class="card__total-price">6.00 ₾</p>
+                                </div>
+                                <div class="card__line"></div>  
+                                <div class="card__actions">
+                                    <a href="" class="card__add-to-favourite">
+                                        <svg>
+                                            <use href="/img/icons/sprite.svg#favorite"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="card__add-to-mealplan">
+                                        <svg>
+                                            <use href="/img/icons/sprite.svg#mealplan"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="card__in-cart-button">
+                                        В корзину
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
             <footer class="footer">
 
             </footer>
         </div>
-        <script>
-            async function loadDishes() {
-                // запрос к REST API
-                const response = await fetch('https://limbiokitchenpro.onrender.com/api/dishes');
-                
-                // превращаем ответ в JS объект
-                const dishes = await response.json();
-
-                // контейнер
-                const container = document.getElementById('dishes');
-
-                // выводим данные
-                dishes.forEach(dishes => {
-                    container.innerHTML += `
-                        <div>
-                            <h2>${dishes.name}</h2>
-                            <p>${dishes.price}$</p>
-                        </div>
-                    `;
-                });
-            }
-
-            loadDishes();
-
+        
+        <script src="/js/main.js">
         </script>
     </body>
 </html>

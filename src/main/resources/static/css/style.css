@@ -42,18 +42,21 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 /**{outline: 1px dotted green;}*/
 
 body{
-    background-color: #5D5555;
     font-family:Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-style: italic;
+    background-color: #5D5555;
     padding: 15px 15px 0px 15px;
-
 }
 .wrapper{
     max-width: 1440px;
     margin: 0 auto;
 }
+
+/* header */
+
 .header {
+}
+.header-mainpage{
+    margin: 0px 0px 15px 0px;
 }
 .header__top {
     
@@ -68,6 +71,10 @@ body{
 .header-top__brand {
     display: flex;
     align-items: center;
+}
+.header-top__brand p{
+    font-weight: 700;
+    font-style: italic;
 }
 .header-top__logo {
     margin: 0px 15px 0px 0px;
@@ -93,6 +100,7 @@ body{
     flex: 1 1 auto;
     height: 42px;
     border-radius: 10px 0px 0px 10px;
+    background-color: #D9D9D9;
 }
 .header-top__search-button {
     height: 42px;
@@ -125,4 +133,176 @@ body{
     height: 50px;
     background-color: #323131;
     border-radius: 0px 0px 20px 20px
+}
+
+
+/* main */
+
+.main {
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card-place {
+}
+
+/* card */
+.card {
+    flex: 1 0 320px;
+}
+.card__box1 {
+    display: inline-block;
+    background-color: #8A928B;
+    border-radius: 15px;
+    padding: 20px;
+}
+.card__box2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #323131;
+    border-radius: 15px;
+    padding: 13px;
+    /*width: 282px;*/
+    height: 469px;
+}
+.card__photo {
+    height: 162px;
+    text-align: center;
+    background-color: #8A928B;
+    border-radius: 7px;
+}
+.card__photo img{
+    border-radius: 7px;
+    width: 255px;
+    height: 100%;
+    /*border: 1px solid #323131;*/
+}
+.card__weight-price {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+    font-size: 24px;
+}
+.card__weight {
+    color: #8A928B;
+}
+.card__price {
+    color: #70B973;
+}
+.card__dishname {
+    background-color: #8A928B;
+    min-height: 71px;;
+    border-radius: 0px 0px 7px 7px;
+    padding: 7px;
+    margin: 0px 0px 17px 0px;
+}
+.card__dishname p{
+    color: #323131;
+    font-size: 16px;
+    font-weight: 600;
+}
+.card__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    margin-bottom: 20px;
+}
+.card__minus-button {
+    margin: 0px 10px 0px 0px;
+}
+.card__minus-button svg{
+    width: 42px;
+    height: 42px;
+    fill: #8A928B;
+}
+.card__quantity{
+    flex: 1 1 100%;
+}
+.card__quantity-input {
+    height: 42px;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    text-align: right;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+}
+.card__plus-button {
+    margin: 0px 10px 0px 10px;
+
+}
+.card__plus-button svg {
+    width: 42px;
+    height: 42px;
+    fill: #8A928B;
+}
+.card__measure-unit {
+    display: flex;
+    flex: 1 1 auto;
+}
+.card__measure-unit p {
+    font-size: 24px;
+    color: #8A928B;
+}
+.card__measure-unit svg{
+    width: 26px;
+    height: 29px;
+    fill: #8A928B;
+}
+.card__line {
+    width: 100%;
+    min-height: 1px;
+    background-color: #8A928B;
+    margin: 0px 0px 10px 0px;
+}
+.card__total {
+    display: flex;
+    justify-content: space-between;
+}
+.card__total-text {
+    color: #8A928B;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.card__total-price{
+    color: #70B973;
+    font-size: 18px;
+}
+.card__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.card__add-to-favourite {
+    margin: 0px 25px 0px 0px;
+}
+.card__add-to-favourite svg{
+    width: 42px;
+    height: 42px;
+    fill: #8A928B;
+}
+.card__add-to-mealplan {
+    margin: 0px 25px 0px 0px;
+}
+.card__add-to-mealplan svg {
+    width: 42px;
+    height: 42px;
+    fill: #8A928B;
+}
+.card__in-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    min-height: 37px;
+    background-color: #70B973;
+    color: #323131;
+    font-size: 20px;
+    padding: 0px 5px 0px 5px;
+    font-weight: 600;
+    border-radius: 5px;
 }

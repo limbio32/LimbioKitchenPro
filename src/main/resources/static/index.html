@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <title>CSS - часть 6</title>
+        <title>LimbioFoodPro - провайдер готовой еды</title>
         <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -19,21 +20,67 @@
                     </div>
                     <div class="header-top__search">
                         <input type="text" class="header-top__search-field" name="search_query">
-                        <div class="header-top__search-button">
-                            <img src="/img/header/find.svg" alt="">
-                        </div>
+                        <button class="header-top__search-button">
+                            <svg>
+                                <use href="/img/icons/sprite.svg#search"></use>
+                            </svg>
+                        </button>
                     </div>
                     <div class="header-top__icons">
-
-                        <img src="/img/header/favorite.svg" alt="" class="header-top__favorite-icon">
-                        <img src="/img/header/cart.svg" alt="" class="header-top__cart-icon">
-                        <img src="/img/header/user.svg" alt="" class="header-top__user-icon">
+                        <a href="" class="header-top__favorite-icon">
+                            <svg>
+                                <use href="/img/icons/sprite.svg#favorite"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="header-top__cart-icon">
+                            <svg>
+                                <use href="/img/icons/sprite.svg#cart"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="header-top__user-icon">
+                            <svg>
+                                <use href="/img/icons/sprite.svg#user"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <menu class="header__menu menu">
-                    <div id="dishes"></div>
+                    <button class="menu__button">
+                        <svg>
+                            <use href="/img/icons/sprite.svg#menu"></use>
+                        </svg>
+                        МЕНЮ
+                    </button>
+                    <ul class="menu__items">
+                        <li>
+                            <a href="" class="menu__item">Главная</a>
+                        </li>
+                        <li>
+                            <a href="" class="menu__item">О нас</a>
+                        </li>
+                        <li>
+                            <a href="" class="menu__item">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="" class="menu__item">Поддержка</a>
+                        </li>
+                        <li>
+                            <a href="" class="menu__item">Контакты</a>
+                        </li>
+                    </ul>
                 </menu>
             </header>
+            <div class="tags">
+                <button class="tag-button">Хит</button>
+                <button class="tag-button">Новинка</button>
+                <button class="tag-button">Акция</button>
+                <button class="tag-button">Бизнес-ланчи</button>
+                <button class="tag-button">Завтраки</button>
+                <button class="tag-button">Вегетарианское</button>
+                <button class="tag-button">Постное</button>
+                <button class="tag-button">На пару</button>
+                <button class="tag-button">Без сахара</button>
+            </div>
             <main class="main">
                 <div class="cards">
                     <div class="card">
@@ -44,51 +91,51 @@
                                 </div>
                                 <div class="card__weight-price">
                                     <p class="card__weight">120 г</p>
-                                    <p class="card__price">3.00 ₾</p>
+                                    <p class="card__price"><span>3.00</span> ₾</p>
                                 </div>
                                 <div class="card__dishname">
                                     <p>Суп с мясом классический с грибами</p>
                                 </div>
                                 <div class="card__controls">
-                                    <a href="" class="card__minus-button">
+                                    <button class="card__minus-button">
                                         <svg>
                                             <use href="/img/icons/sprite.svg#minus"></use>
                                         </svg>
-                                    </a>
+                                    </button>
                                     <div class="card__quantity">
-                                        <input type="text" name="quantity" class="card__quantity-input" value="2">
+                                        <input type="number" name="quantity" class="card__quantity-input" value="0" min="0">
                                     </div>
-                                    <a href="" class="card__plus-button">
+                                    <button class="card__plus-button">
                                         <svg>
                                             <use href="/img/icons/sprite.svg#plus"></use>
                                         </svg>
-                                    </a>
-                                    <a href="" class="card__measure-unit">
+                                    </button>
+                                    <button class="card__measure-unit">
                                         <p>шт</p> 
                                         <svg>
                                             <use href="/img/icons/sprite.svg#chevron_down"></use>
                                         </svg>
-                                    </a>
+                                    </button>
                                 </div>
                                 <div class="card__total">
                                     <p class="card__total-text">Итого:</p>
-                                    <p class="card__total-price">6.00 ₾</p>
+                                    <p class="card__total-price"><span>0.00</span> ₾</p>
                                 </div>
                                 <div class="card__line"></div>  
                                 <div class="card__actions">
-                                    <a href="" class="card__add-to-favourite">
+                                    <a href="#" class="card__add-to-favourite">
                                         <svg>
                                             <use href="/img/icons/sprite.svg#favorite"></use>
                                         </svg>
                                     </a>
-                                    <a href="" class="card__add-to-mealplan">
+                                    <a href="#" class="card__add-to-mealplan">
                                         <svg>
                                             <use href="/img/icons/sprite.svg#mealplan"></use>
                                         </svg>
                                     </a>
-                                    <a href="" class="card__in-cart-button">
+                                    <button class="card__in-cart-button">
                                         В корзину
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>

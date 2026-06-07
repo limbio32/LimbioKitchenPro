@@ -78,3 +78,13 @@ async function loadDishes() {
 }
 loadDishes();
 
+const menu_button = document.querySelector('.menu__button');
+const dishmenu = document.querySelector('.dishmenu');
+const close_button = document.querySelector('.dishmenu__close');
+
+menu_button.addEventListener("click", () => {
+    dishmenu.style.display = "block";
+});
+close_button.addEventListener("click", () => {
+    dishmenu.style.display = "none";
+});

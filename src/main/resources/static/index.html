@@ -83,64 +83,9 @@
             </div>
             <main class="main">
                 <div class="cards">
-                    <div class="card">
-                        <div class="card__box1">
-                            <div class="card__box2">
-                                <div class="card__photo">
-                                    <img src="/img/card/07b6f9a5-dc1e-4a84-9e3c-0d7b6152fa49.png" alt="">
-                                </div>
-                                <div class="card__weight-price">
-                                    <p class="card__weight">120 г</p>
-                                    <p class="card__price"><span>3.00</span> ₾</p>
-                                </div>
-                                <div class="card__dishname">
-                                    <p>Суп с мясом классический с грибами</p>
-                                </div>
-                                <div class="card__controls">
-                                    <button class="card__minus-button">
-                                        <svg>
-                                            <use href="/img/icons/sprite.svg#minus"></use>
-                                        </svg>
-                                    </button>
-                                    <div class="card__quantity">
-                                        <input type="number" name="quantity" class="card__quantity-input" value="0" min="0">
-                                    </div>
-                                    <button class="card__plus-button">
-                                        <svg>
-                                            <use href="/img/icons/sprite.svg#plus"></use>
-                                        </svg>
-                                    </button>
-                                    <button class="card__measure-unit">
-                                        <p>шт</p> 
-                                        <svg>
-                                            <use href="/img/icons/sprite.svg#chevron_down"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="card__total">
-                                    <p class="card__total-text">Итого:</p>
-                                    <p class="card__total-price"><span>0.00</span> ₾</p>
-                                </div>
-                                <div class="card__line"></div>  
-                                <div class="card__actions">
-                                    <a href="#" class="card__add-to-favourite">
-                                        <svg>
-                                            <use href="/img/icons/sprite.svg#favorite"></use>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="card__add-to-mealplan">
-                                        <svg>
-                                            <use href="/img/icons/sprite.svg#mealplan"></use>
-                                        </svg>
-                                    </a>
-                                    <button class="card__in-cart-button">
-                                        В корзину
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
+
             </main>
             <footer class="footer">
 
@@ -260,31 +205,7 @@
             <div class="unibox">
                 <div class="cart">
                     <div class="cart__items">
-                        <div class="cart__item dish-item-mini">
-                            <div class="dish-item-mini__top">
-                                <div class="dish-item-mini__img-box">
-                                    <button class="dish-item-mini__close-button">
-                                        <svg>
-                                            <use href="/img/icons/sprite.svg#cross"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="dish-item-mini__dishname">
-                                Суп с мясом классический с грибами
-                            </div>
-                            <div class="dish-item-mini__numbers">
-                                <button class="dish-item-mini__change-quantity-button">
-                                    <span class="dish-item-mini__quantity">1</span>
-                                    <span> x </span>
-                                    <span class="dish-item-mini__price-snapshot">3.00</span> 
-                                </button>
-                                <div class="dish-item-mini__total">
-                                    <span class="dish-item-mini__sum">6.00</span> 
-                                    <span>₾</span>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="ration">
@@ -321,7 +242,10 @@
                     <div class="lowerbar__order">
                         <div class="lowerbar__total">
                             <p class="lowerbar__total-label">Итого:</p>
-                            <div class="lowerbar__total-sum">16.50 ₾</div>
+                            <div class="lowerbar__total-sum">
+                                <span class="lowerbar__total-sum-value">16.50</span>
+                                <span>₾</span>
+                            </div>
                         </div>
                         <button class="lowerbar__formalize-order-button">ОФОРМИТЬ ЗАКАЗ</button>
                     </div>
@@ -330,7 +254,232 @@
             </div>
         </div>
 
+
+        
+        <template class="card_template">
+            <div class="card">
+                <div class="card__box1">
+                    <div class="card__box2">
+                        <div class="card__photo"></div>
+                        <div class="card__weight-price">
+                            <div class="card__weight">
+                                <span class="card__weight-value">120</span>
+                                <span class="card__weight-unit">г</span>
+                            </div>
+                            <div class="card__price">
+                                <span class="card__price-value">3.00</span>
+                                <span class="card__price-unit">₾</span>
+                            </div>
+                        </div>
+                        <div class="card__dishname">
+                            <p>Суп с мясом классический с грибами</p>
+                        </div>
+                        <div class="card__dishcontrol dishcontrol">
+                            <div class="dishcontrol__quantity-control">
+                                <button class="dishcontrol__minus-button">
+                                    <svg>
+                                        <use href="/img/icons/sprite.svg#minus"></use>
+                                    </svg>
+                                </button>
+                                <div class="dishcontrol__quantity">
+                                    <input type="number" name="quantity" class="dishcontrol__quantity-input" value="0" min="0">
+                                </div>
+                                <button class="dishcontrol__plus-button">
+                                    <svg>
+                                        <use href="/img/icons/sprite.svg#plus"></use>
+                                    </svg>
+                                </button>
+                                <button class="dishcontrol__measure-unit">
+                                    <p>шт</p> 
+                                    <svg>
+                                        <use href="/img/icons/sprite.svg#chevron_down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="dishcontrol__total">
+                                <p class="dishcontrol__total-text">Итого:</p>
+                                <p class="dishcontrol__total-price">
+                                    <span class="dishcontrol__total-price-value">0.00</span>
+                                    <span class="dishcontrol__total-price-unit">₾</span>
+                                </p>
+                            </div>
+                            <div class="dishcontrol__line"></div>  
+                            <div class="dishcontrol__actions">
+                                <a href="#" class="dishcontrol__add-to-favourite">
+                                    <svg>
+                                        <use href="/img/icons/sprite.svg#favorite"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="dishcontrol__add-to-mealplan">
+                                    <svg>
+                                        <use href="/img/icons/sprite.svg#mealplan"></use>
+                                    </svg>
+                                </a>
+                                <button class="dishcontrol__in-cart-button">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template class="dish-item-mini_template">
+            <div class="dish-item-mini">
+                <div class="dish-item-mini__top">
+                    <div class="dish-item-mini__img-box">
+                        <button class="dish-item-mini__close-button">
+                            <svg>
+                                <use href="/img/icons/sprite.svg#cross"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="dish-item-mini__dishname">
+                    Суп с мясом классический с грибами
+                </div>
+                <div class="dish-item-mini__numbers">
+                    <button class="dish-item-mini__change-quantity-button">
+                        <span class="dish-item-mini__quantity">1</span>
+                        <span> x </span>
+                        <span class="dish-item-mini__price-snapshot">3.00</span> 
+                    </button>
+                    <div class="dish-item-mini__total">
+                        <span class="dish-item-mini__sum">6.00</span> 
+                        <span>₾</span>
+                    </div>
+                </div>
+            </div>        
+        </template>
+
+        <template class="dishpage_template">
+            <div class="dishpage">
+                <div class="dishpage__main">
+                    <div class="dishpage__img-box"></div>
+                    <div class="dishpage__weight-price">
+                        <div class="dishpage__weight">
+                            <span class="dishpage__weight-value">120</span>
+                            <span class="dishpage__weight-unit">г</span>
+                        </div>
+                        <div class="dishpage__nav">
+                            <div class="dishpage__nav-item"></div>
+                        </div>
+                        <div class="dishpage__price">
+                            <span class="dishpage__price-value">3.00</span>
+                            <span class="dishpage__price-unit">₾</span>
+                        </div>
+                    </div>
+                    <div class="dishpage__dishname">
+                        Суп с мясом классический с грибами
+                    </div>
+                    <div class="dishpage__description">
+                        <p>
+                            Нежный молочный суп — вкус, знакомый с детства. Лёгкий, согревающий и по-домашнему уютный: ароматное молоко, отборная вермишель и щепотка заботы в каждой ложке. Идеальный выбор для тех, кто хочет насладиться простым и полезным блюдом, которое дарит чувство комфорта и сытости. Попробуйте — иногда именно самые простые вкусы становятся любимыми.
+                        </p>
+                    </div>
+                </div>
+                <div class="dishpage__addition">
+                    <div class="dishpage__nutritional-value nutritional-value">
+                        <div class="nutritional-value__label">Пищевая ценность:</div>
+                        <div class="nutritional-value__box">
+                            <table class="nutritional-value__table">
+                                <tr class="nutritional-value_string">
+                                    <th class="nutritional-value__name">Белки:</th>
+                                    <td class="nutritional-value__weight">
+                                        <span class="nutritional-value__value">50</span>
+                                        <span class="nutritional-value__unit">г</span>
+                                    </td>
+                                </tr>
+                                <tr class="nutritional-value_string">
+                                    <th class="nutritional-value__name">Жиры:</th>
+                                    <td class="nutritional-value__weight">
+                                        <span class="nutritional-value__value">75</span>
+                                        <span class="nutritional-value__unit">г</span>
+                                    </td>
+                                </tr>
+                                <tr class="nutritional-value_string">
+                                    <th class="nutritional-value__name">Углеводы:</th>
+                                    <td class="nutritional-value__weight">
+                                        <span class="nutritional-value__value">80</span>
+                                        <span class="nutritional-value__unit">г</span>
+                                    </td>
+                                </tr>
+                                <tr class="nutritional-value_string">
+                                    <th class="nutritional-value__name">Калории:</th>
+                                    <td class="nutritional-value__weight">
+                                        <span class="nutritional-value__value">430</span>
+                                        <span class="nutritional-value__unit">ккал</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="dishpage__composition dish-composition">
+                        <div class="dish-composition__label">Состав:</div>
+                        <div class="dish-composition__box">
+                            <ul class="dish-composition__list">
+                                <li class="dish-composition__item">курица</li>
+                                <li class="dish-composition__item">картофель</li>
+                                <li class="dish-composition__item">лук</li>
+                                <li class="dish-composition__item">морковь</li>
+                                <li class="dish-composition__item">грибы</li>
+                                <li class="dish-composition__item">сельдерей</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dishpage__dishcontrol dishcontrol">
+                        <div class="dishcontrol__quantity-control">
+                            <button class="dishcontrol__minus-button">
+                                <svg>
+                                    <use href="/img/icons/sprite.svg#minus"></use>
+                                </svg>
+                            </button>
+                            <div class="dishcontrol__quantity">
+                                <input type="number" name="quantity" class="dishcontrol__quantity-input" value="0" min="0">
+                            </div>
+                            <button class="dishcontrol__plus-button">
+                                <svg>
+                                    <use href="/img/icons/sprite.svg#plus"></use>
+                                </svg>
+                            </button>
+                            <button class="dishcontrol__measure-unit">
+                                <p>шт</p> 
+                                <svg>
+                                    <use href="/img/icons/sprite.svg#chevron_down"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="dishcontrol__total">
+                            <p class="dishcontrol__total-text">Итого:</p>
+                            <p class="dishcontrol__total-price">
+                                <span class="dishcontrol__total-price-value">0.00</span>
+                                <span class="dishcontrol__total-price-unit">₾</span>
+                            </p>
+                        </div>
+                        <div class="dishcontrol__line"></div>  
+                        <div class="dishcontrol__actions">
+                            <a href="#" class="dishcontrol__add-to-favourite">
+                                <svg>
+                                    <use href="/img/icons/sprite.svg#favorite"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="dishcontrol__add-to-mealplan">
+                                <svg>
+                                    <use href="/img/icons/sprite.svg#mealplan"></use>
+                                </svg>
+                            </a>
+                            <button class="dishcontrol__in-cart-button">
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>        
+
         <script src="/js/main.js">
         </script>
+
     </body>
 </html>

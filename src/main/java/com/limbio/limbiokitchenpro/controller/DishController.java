@@ -27,6 +27,12 @@ public class DishController {
                         p.getId(),
                         p.getName(),
                         p.getPrice(),
+                        p.getPortionWeight(),
+                        p.getCalorie(),
+                        p.getProtein(),
+                        p.getFat(),
+                        p.getCar(),
+                        p.getDescription(),
                         p.getMainImageUrl()
                 ))
                 .toList();

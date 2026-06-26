@@ -8,87 +8,136 @@
     </head>
     <body>
         <div class="wrapper">
-            <header class="header header-mainpage">
-                <div class="header__top header-top">
-                    <div class="header-top__brand">
-                        <a href="" class="header-top__logo">
-                            <img src="/img/header/logo-64.png" alt="">
-                        </a>
-                        <a href="#" class="header-top__brandname">
-                            <p>LimbioKitchenPro</p> 
-                        </a>
+            <div class="general">
+                <header class="header header-mainpage">
+                    <div class="header__top header-top">
+                        <div class="header-top__brand">
+                            <a href="" class="header-top__logo">
+                                <img src="/img/header/logo-64.png" alt="">
+                            </a>
+                            <a href="#" class="header-top__brandname">
+                                <p>LimbioKitchenPro</p> 
+                            </a>
+                        </div>
+                        <div class="header-top__search">
+                            <input type="text" class="header-top__search-field" name="search_query">
+                            <button class="header-top__search-button">
+                                <svg>
+                                    <use href="/img/icons/sprite.svg#search"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="header-top__icons">
+                            <a href="" class="header-top__favorite-icon">
+                                <svg>
+                                    <use href="/img/icons/sprite.svg#favorite"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="header-top__cart-icon">
+                                <svg>
+                                    <use href="/img/icons/sprite.svg#cart"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="header-top__user-icon">
+                                <svg>
+                                    <use href="/img/icons/sprite.svg#user"></use>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="header-top__search">
-                        <input type="text" class="header-top__search-field" name="search_query">
-                        <button class="header-top__search-button">
+                    <menu class="header__menu menu">
+                        <button class="menu__button">
                             <svg>
-                                <use href="/img/icons/sprite.svg#search"></use>
+                                <use href="/img/icons/sprite.svg#menu"></use>
                             </svg>
+                            МЕНЮ
                         </button>
-                    </div>
-                    <div class="header-top__icons">
-                        <a href="" class="header-top__favorite-icon">
-                            <svg>
-                                <use href="/img/icons/sprite.svg#favorite"></use>
-                            </svg>
-                        </a>
-                        <a href="" class="header-top__cart-icon">
-                            <svg>
-                                <use href="/img/icons/sprite.svg#cart"></use>
-                            </svg>
-                        </a>
-                        <a href="" class="header-top__user-icon">
-                            <svg>
-                                <use href="/img/icons/sprite.svg#user"></use>
-                            </svg>
-                        </a>
-                    </div>
+                        <ul class="menu__items">
+                            <li>
+                                <a href="" class="menu__item">Главная</a>
+                            </li>
+                            <li>
+                                <a href="" class="menu__item">О нас</a>
+                            </li>
+                            <li>
+                                <a href="" class="menu__item">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="" class="menu__item">Поддержка</a>
+                            </li>
+                            <li>
+                                <a href="" class="menu__item">Контакты</a>
+                            </li>
+                        </ul>
+                    </menu>
+                </header>
+                <div class="tags">
+                    <button class="tag-button">Хит</button>
+                    <button class="tag-button">Новинка</button>
+                    <button class="tag-button">Акция</button>
+                    <button class="tag-button">Бизнес-ланчи</button>
+                    <button class="tag-button">Завтраки</button>
+                    <button class="tag-button">Вегетарианское</button>
+                    <button class="tag-button">Постное</button>
+                    <button class="tag-button">На пару</button>
+                    <button class="tag-button">Без сахара</button>
                 </div>
-                <menu class="header__menu menu">
-                    <button class="menu__button">
-                        <svg>
-                            <use href="/img/icons/sprite.svg#menu"></use>
-                        </svg>
-                        МЕНЮ
-                    </button>
-                    <ul class="menu__items">
-                        <li>
-                            <a href="" class="menu__item">Главная</a>
-                        </li>
-                        <li>
-                            <a href="" class="menu__item">О нас</a>
-                        </li>
-                        <li>
-                            <a href="" class="menu__item">Отзывы</a>
-                        </li>
-                        <li>
-                            <a href="" class="menu__item">Поддержка</a>
-                        </li>
-                        <li>
-                            <a href="" class="menu__item">Контакты</a>
-                        </li>
-                    </ul>
-                </menu>
-            </header>
-            <div class="tags">
-                <button class="tag-button">Хит</button>
-                <button class="tag-button">Новинка</button>
-                <button class="tag-button">Акция</button>
-                <button class="tag-button">Бизнес-ланчи</button>
-                <button class="tag-button">Завтраки</button>
-                <button class="tag-button">Вегетарианское</button>
-                <button class="tag-button">Постное</button>
-                <button class="tag-button">На пару</button>
-                <button class="tag-button">Без сахара</button>
+                <main class="main">
+                    <div class="cards">
+    
+                    </div>
+                </main>
+                <footer class="footer">
+    
+                </footer>
             </div>
-            <main class="main">
-                <div class="cards">
-
+            <div class="panel">
+                <div class="panel__nav">
+                    <button class="panel__dishes-catalog-button">
+                        <svg>
+                            <use href="/img/icons/sprite.svg#dishes_catalog"></use>
+                        </svg>
+                    </button>
+                    <button class="panel__cart-button">
+                        <svg>
+                            <use href="/img/icons/sprite.svg#cart"></use>
+                        </svg>
+                    </button>
+                    <button class="panel__favorite-button">
+                        <svg>
+                            <use href="/img/icons/sprite.svg#favorite"></use>
+                        </svg>
+                    </button>
+                    <button class="panel__ration-button">
+                        <svg>
+                            <use href="/img/icons/sprite.svg#mealplan"></use>
+                        </svg>
+                    </button>
                 </div>
-            </main>
-            <footer class="footer">
+                <div class="panel__main">
+                    <div class="cart">
+                        <div class="cart__items">
 
-            </footer>
+                        </div>
+                    </div>
+                    <div class="ration">
+        
+                    </div>
+                    <div class="favorite">
+                        
+                    </div>
+                </div>
+                <div class="panel__order">
+                    <div class="panel__total">
+                        <p class="panel__total-label">Итого:</p>
+                        <div class="panel__total-sum">
+                            <span class="panel__total-sum-value">16.50</span>
+                            <span>₾</span>
+                        </div>
+                    </div>
+                    <button class="panel__formalize-order-button">ОФОРМИТЬ ЗАКАЗ</button>                
+                </div>
+            </div>
         </div>
 
         <div class="dishmenu">
@@ -113,78 +162,92 @@
                         </button>
                     </div>
                     <div class="dishmenu__main">
-                        <div class="dishmenu__category">
-
-                            <template class="dishmenu__item_template">
-                                <div class="dishmenu__item">
-                                    <div class="dishmenu__item-box1">
-                                        <div class="dishmenu__item-box2">
-                                            <div class="dishmenu__img-box"></div>
-                                            <h2 class="dishmenu__title">Супы</h2>
-                                        </div>
+                        <div class="dishmenu__items">
+                            <div class="dishmenu__item">
+                                <div class="dishmenu__item-box1">
+                                    <div class="dishmenu__item-box2">
+                                        <div class="dishmenu__img-box dishmenu__img-box1"></div>
+                                        <h2 class="dishmenu__title">Супы</h2>
                                     </div>
                                 </div>
-                            </template>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="fixed-content">
-            <div class="unibox">
-                <div class="cart">
-                    <div class="cart__items">
-
-                    </div>
-                </div>
-                <div class="ration">
-    
-                </div>
-                <div class="favorite">
-                    
-                </div>
-            </div>
-            <div class="lowerbar">
-                <div class="lowerbar__box">
-                    <div class="lowerbar_nav">
-                        <button class="lowerbar__dishes-catalog-button">
-                            <svg>
-                                <use href="/img/icons/sprite.svg#dishes_catalog"></use>
-                            </svg>
-                        </button>
-                        <button class="lowerbar__cart-button">
-                            <svg>
-                                <use href="/img/icons/sprite.svg#cart"></use>
-                            </svg>
-                        </button>
-                        <button class="lowerbar__favorite-button">
-                            <svg>
-                                <use href="/img/icons/sprite.svg#favorite"></use>
-                            </svg>
-                        </button>
-                        <button class="lowerbar__ration-button">
-                            <svg>
-                                <use href="/img/icons/sprite.svg#mealplan"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="lowerbar__order">
-                        <div class="lowerbar__total">
-                            <p class="lowerbar__total-label">Итого:</p>
-                            <div class="lowerbar__total-sum">
-                                <span class="lowerbar__total-sum-value">16.50</span>
-                                <span>₾</span>
+                            </div>
+                            <div class="dishmenu__item">
+                                <div class="dishmenu__item-box1">
+                                    <div class="dishmenu__item-box2">
+                                        <div class="dishmenu__img-box dishmenu__img-box2"></div>
+                                        <h2 class="dishmenu__title">Завтраки</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dishmenu__item">
+                                <div class="dishmenu__item-box1">
+                                    <div class="dishmenu__item-box2">
+                                        <div class="dishmenu__img-box dishmenu__img-box3"></div>
+                                        <h2 class="dishmenu__title">Хлебобулочные изделия</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dishmenu__item">
+                                <div class="dishmenu__item-box1">
+                                    <div class="dishmenu__item-box2">
+                                        <div class="dishmenu__img-box dishmenu__img-box4"></div>
+                                        <h2 class="dishmenu__title">Десерты</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dishmenu__item">
+                                <div class="dishmenu__item-box1">
+                                    <div class="dishmenu__item-box2">
+                                        <div class="dishmenu__img-box dishmenu__img-box5"></div>
+                                        <h2 class="dishmenu__title">Горячие блюда</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dishmenu__item">
+                                <div class="dishmenu__item-box1">
+                                    <div class="dishmenu__item-box2">
+                                        <div class="dishmenu__img-box dishmenu__img-box6"></div>
+                                        <h2 class="dishmenu__title">Салаты</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dishmenu__item">
+                                <div class="dishmenu__item-box1">
+                                    <div class="dishmenu__item-box2">
+                                        <div class="dishmenu__img-box dishmenu__img-box7"></div>
+                                        <h2 class="dishmenu__title">Напитки</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dishmenu__item">
+                                <div class="dishmenu__item-box1">
+                                    <div class="dishmenu__item-box2">
+                                        <div class="dishmenu__img-box dishmenu__img-box8"></div>
+                                        <h2 class="dishmenu__title">Соусы и заправки</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dishmenu__item">
+                                <div class="dishmenu__item-box1">
+                                    <div class="dishmenu__item-box2">
+                                        <div class="dishmenu__img-box dishmenu__img-box9"></div>
+                                        <h2 class="dishmenu__title">Гарниры</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dishmenu__item">
+                                <div class="dishmenu__item-box1">
+                                    <div class="dishmenu__item-box2">
+                                        <div class="dishmenu__img-box dishmenu__img-box10"></div>
+                                        <h2 class="dishmenu__title">Наборы</h2>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <button class="lowerbar__formalize-order-button">ОФОРМИТЬ ЗАКАЗ</button>
                     </div>
                 </div>
-            
             </div>
         </div>
-
 
         
         <template class="card_template">
@@ -202,8 +265,8 @@
                                 <span class="card__price-unit">₾</span>
                             </div>
                         </div>
-                        <div class="card__dishname dishname">
-                            Суп с мясом классический с грибами
+                        <div class="card__dishname">
+                            <p>Суп с мясом классический с грибами</p>
                         </div>
                         <div class="card__dishcontrol dishcontrol">
                             <div class="dishcontrol__quantity-control">
@@ -301,7 +364,7 @@
                             <span class="dishpage__price-unit">₾</span>
                         </div>
                     </div>
-                    <div class="dishpage__dishname dishname">
+                    <div class="dishpage__dishname">
                         Суп с мясом классический с грибами
                     </div>
                     <div class="dishpage__description">
@@ -318,28 +381,28 @@
                                 <tr class="nutritional-value_string">
                                     <th class="nutritional-value__name">Белки:</th>
                                     <td class="nutritional-value__weight">
-                                        <span class="nutritional-value__value nutritional-value__protein-value">50</span>
+                                        <span class="nutritional-value__value">50</span>
                                         <span class="nutritional-value__unit">г</span>
                                     </td>
                                 </tr>
                                 <tr class="nutritional-value_string">
                                     <th class="nutritional-value__name">Жиры:</th>
                                     <td class="nutritional-value__weight">
-                                        <span class="nutritional-value__value nutritional-value__fat-value">75</span>
+                                        <span class="nutritional-value__value">75</span>
                                         <span class="nutritional-value__unit">г</span>
                                     </td>
                                 </tr>
                                 <tr class="nutritional-value_string">
                                     <th class="nutritional-value__name">Углеводы:</th>
                                     <td class="nutritional-value__weight">
-                                        <span class="nutritional-value__value nutritional-value__car-value">80</span>
+                                        <span class="nutritional-value__value">80</span>
                                         <span class="nutritional-value__unit">г</span>
                                     </td>
                                 </tr>
                                 <tr class="nutritional-value_string">
                                     <th class="nutritional-value__name">Калории:</th>
                                     <td class="nutritional-value__weight">
-                                        <span class="nutritional-value__value nutritional-value__calorie-value">430</span>
+                                        <span class="nutritional-value__value">430</span>
                                         <span class="nutritional-value__unit">ккал</span>
                                     </td>
                                 </tr>

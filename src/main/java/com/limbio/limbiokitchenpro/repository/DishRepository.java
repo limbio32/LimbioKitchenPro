@@ -13,6 +13,12 @@ public interface DishRepository extends JpaRepository<Dish, Integer> {
             d.id AS id,
             d.name AS name,
             d.price AS price,
+            d.portion_weight AS portionWeight,
+            d.calorie AS calorie,
+            d.protein AS protein,
+            d.fat AS fat,
+            d.car AS car,
+            d.description AS description,     
             i.url AS mainImageUrl
         FROM dishes d
         LEFT JOIN dish_image di
